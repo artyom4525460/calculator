@@ -29,7 +29,39 @@ section {
 img {
   max-width: 100%; }
 
-h3 {
-  font-size: 26px;
-  color: #292929;
-  font-weight: bold; }
+label {
+  font-size: 16px;
+  color: #838383;
+  font-weight: 600;
+  margin: 0 0 20px; }
+
+#phone {
+  background: url(../images/phone.png) no-repeat transparent;
+  background-size: cover;
+  height: 655px;
+  width: 450px;
+  padding: 70px 42px 70px 61px;
+  left: 0;
+  text-align: center;
+  position: relative; }
+
+button {
+  background: #ac702a; }
+
+.button {
+  border-radius: 50px;
+  width: 100%;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Open Sans Condensed";
+  font-size: 18px;
+  padding: 10px;
+  letter-spacing: .5px;
+  color: #fff;
+  border: 1px solid #ac702a;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease; }
+  .button:hover {
+    color: #ac702a;
+    background-color: #fff; }

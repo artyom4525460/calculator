@@ -43,8 +43,20 @@ img {
     max-width: 100%;
 }
 
-h3 {
-    font-size: 26px;
-    color: #292929;
-    font-weight: bold;
+label {
+    font-size: 16px;
+    color: #838383;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+#phone {
+    background: url(../images/phone.png) no-repeat transparent;
+    background-size: cover;
+    height: 655px;
+    width: 450px;
+    padding: 70px 42px 70px 61px;
+    left: 0;
+    text-align: center;
+    position: relative;
 }
