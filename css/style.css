@@ -1,0 +1,35 @@
+/*
+    DEFAULT
+*/
+/* colors: */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: "Open Sans Condensed";
+  overflow-x: hidden;
+  font-size: 16px;
+  color: #838383; }
+
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important; }
+
+section {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+  box-sizing: border-box; }
+
+* {
+  outline: none;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+h3 {
+  font-size: 26px;
+  color: #292929;
+  font-weight: bold; }

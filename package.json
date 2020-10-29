@@ -1,0 +1,25 @@
+{
+    "dependancies": {
+        "node-sass": "^4.7.2"
+    },
+    "scripts": {
+        "scss": "node-sass --watch scss -o css"
+    },
+    "name": "calculator",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/artyom4525460/calculator.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/artyom4525460/calculator/issues"
+    },
+    "homepage": "https://github.com/artyom4525460/calculator#readme",
+    "description": "",
+    "dependencies": {
+        "node-sass": "^4.14.1"
+    }
+}
