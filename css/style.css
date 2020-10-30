@@ -44,8 +44,7 @@ p {
   padding: 70px 42px 70px 61px;
   left: 0;
   text-align: center;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 button {
   background: #ac702a;
