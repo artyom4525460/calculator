@@ -1,5 +1,7 @@
 var topSlider = {
     sliderBackground : document.getElementById('top-slider-background'),
+    scaleBlock : document.getElementById('scale-block'),
+    whiteBlockBackground : document.getElementById('white-block-background'),
     sliderScale : document.getElementById('scale'),
     currentDeg : 88.69,
     addButton: document.getElementById('addSum'),
@@ -66,10 +68,18 @@ var form = {
         topSlider.currentDeg = Math.ceil(form.currentAmount / ( (form.maxAmount )/180 ) )
         topSlider.move(topSlider.currentDeg)
         topSliderButton.move(topSlider.currentDeg)
+    },
+    goto: function(value){
+        topSlider.currentDeg = Math.ceil(value/0.76) * 0.76
+        form.currentAmount = Math.ceil(Math.ceil(topSlider.currentDeg * ( (form.maxAmount )/180 ) ) /10 ) * 10
+        this.amount.innerHTML = this.currentAmount
+        this.sumValue.value  = this.currentAmount
+        topSlider.move(topSlider.currentDeg)
+        topSliderButton.move(topSlider.currentDeg)
     }
 }
 
-var moveSliders = function(mousePosition){
+var moveSliders = function(mousePosition, goto = false){
     let center = topSlider.getCenterCoords()
     let xLine = center.x - mousePosition.x
     let yLine = center.y - mousePosition.y
@@ -77,6 +87,9 @@ var moveSliders = function(mousePosition){
         yLine = 0;
     }
     let newDeg = 180 / Math.PI * Math.atan2(yLine, xLine);
+    if( goto ){
+        form.goto(newDeg)
+    }
     if((newDeg > topSlider.currentDeg + 0.76 || newDeg < topSlider.currentDeg - 0.76) && !(newDeg > 180) && !(newDeg < 0)){
         if(newDeg > topSlider.currentDeg + 0.76){
             form.add(10)
@@ -87,6 +100,16 @@ var moveSliders = function(mousePosition){
     }
 }
 
+topSlider.scaleBlock.addEventListener('click', function(event){
+    if(event.target !== topSlider.whiteBlockBackground){
+        mousePosition = {
+            x : event.clientX,
+            y : event.clientY
+        };
+        console.log(mousePosition)
+        moveSliders(mousePosition, true)
+    }
+}, true)
 
 topSlider.addButton.addEventListener('click', function(event){
     event.preventDefault()
