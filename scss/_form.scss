@@ -1,20 +1,73 @@
 .phone-form {}
 
-// #arc-slider {
-//     width: 335px !important;
-//     height: 187px !important;
-//     overflow: hidden;
-//     padding: 30px;
-//     padding-top: 12px;
-//     margin-left: 0px;
-//     position: relative;
-// }
-// .rs-container {
-//     height: 150px;
-//     width: 300px;
-// }
-// .rs-inner-container {
-//     height: 100%;
-//     width: 100%;
-//     position: relative;
-// }
+#top-slider{
+    margin: 0 auto;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    .background{
+        width: 300px;
+        height: 150px;
+        border-radius: 300px 300px 0 0;
+        background-color: $grey;
+        overflow: hidden;
+        position: relative;
+        .scale{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            .background-scale{
+                width: 300px;
+                height: 150px;
+                border-radius: 0 0 300px 300px;
+                background-color: $brown;
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+            }
+        }
+    }
+    .button-scale{
+        width: 280px;
+        height: 0;
+        background-color: rgba(100,100,100,0.3);
+        position: absolute;
+        bottom: 0;
+        z-index: 4;
+        img{
+            height: 70px;
+            width: 70px;
+            -webkit-transform: rotate(-105deg);
+            transform: rotate(-105deg);
+            position: absolute;
+            bottom: -33px;
+            left: -30px;
+            cursor: all-scroll;
+        }
+        #top-slider-button{
+            height: 1px;
+            width: 100%;
+        }
+    }
+    .white-block{
+        width: 300px;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &-background{
+            width: 260px;
+            height: 150px;
+            border-radius: 260px 260px 0 0;
+            background-color: #fff;
+            overflow: hidden;
+            position: absolute;
+            top: 30px;
+            left: 0;
+        }
+    }
+
+}

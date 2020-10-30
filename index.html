@@ -14,30 +14,40 @@
             <div class="phone-form">
                 <form action="">
                     <div class="form-field">
-                        <label>What loan amount would you like?</label>
+                        <label>
+                            <p>What loan amount would you like?</p>
+                        </label>
                         <input type="hidden">
-                        <div id="arc-slider" class="rslider rs-ie rs-control rs-animation" style="height: 150px; width: 300px;">
-                            <div class="rs-container top half" style="height: 150px; width: 300px;">
-                                <div class="rs-inner-container">
-                                    <div class="rs-block rs-outer rs-border rs-split">
-                                        <div class="rs-path rs-transition rs-range-color" style="transform: rotate(0deg);"></div>
-                                        <div class="rs-path rs-transition rs-range-color" style="opacity: 0; transform: rotate(-91.3043deg);"></div>
-                                        <div class="rs-path rs-transition rs-path-color" style="transform: rotate(88.6957deg); opacity: 1;"></div>
-                                        <div class="rs-path rs-transition rs-path-color" style="opacity: 1; z-index: 1; transform: rotate(-180deg);"></div><span class="rs-block" style="padding: 14px;"><div class="rs-inner rs-bg-color rs-border"></div></span></div>
+                        <div id="top-slider">
+                            <div class="background" id="top-slider-background">
+                                <div class="scale" id="scale">
+                                    <div class="background-scale"></div>
                                 </div>
-                                <div class="rs-bar rs-transition rs-first" style="z-index: 7; transform: rotate(88.6957deg);">
-                                    <div class="rs-handle rs-move" index="2" tabindex="0" role="slider" aria-label="arc-slider_handle" style="height: 46px; width: 46px; margin: -23px 0px 0px -15px;" aria-valuenow="800" aria-valuemin="120" aria-valuemax="1500"></div>
-                                </div><span class="rs-bar rs-transition rs-start" style="transform: rotate(0deg);"><span class="rs-seperator rs-border" style="width: 14px; margin-top: 0px;"></span></span><span class="rs-bar rs-transition rs-end" style="transform: rotate(180deg);"><span class="rs-seperator rs-border" style="width: 14px; margin-top: 0px;"></span></span>
-                                <span
-                                    class="rs-tooltip rs-tooltip-text" style="margin-left: -39.5px;"><img src="https://megacashbucks.com/public/images/dollar-removebg.png" style="width: 21px; margin-top: -5px; margin-right: 2px;">800</span>
-                            </div><input type="hidden" name="arc-slider" value="800"></div>
+                            </div>
+                            <div class="button-scale" id="button-scale">
+                                <div id="top-slider-button">
+                                    <img src="./images/cursor.png" alt="" >
+                                </div>
+                            </div>
+                            <div class="white-block">
+                                <div class="white-block-background"></div>
+                            </div>
+                            <div class="amount"></div>
+                            <div class="buttons">
+                                
+                            </div>
+                        </div>
                     </div>
                     <div class="form-field">
-                        <label>Want to know how many repayments?</label>
+                        <label>
+                            <p>Want to know how many repayments?</p>
+                        </label>
                         <input type="hidden">
                     </div>
                     <div class="form-field">
-                        <label>Tell us what province you live in.</label>
+                        <label>
+                            <p>Tell us what province you live in.</p>
+                        </label>
                         <input type="hidden">
                         <div class="selector" id="selector">
 

@@ -29,7 +29,7 @@ section {
 img {
   max-width: 100%; }
 
-label {
+p {
   font-size: 16px;
   color: #838383;
   font-weight: 600;
@@ -65,3 +65,65 @@ button {
   .button:hover {
     color: #ac702a;
     background-color: #fff; }
+
+#top-slider {
+  margin: 0 auto;
+  width: 300px;
+  height: 150px;
+  position: relative; }
+  #top-slider .background {
+    width: 300px;
+    height: 150px;
+    border-radius: 300px 300px 0 0;
+    background-color: #838383;
+    overflow: hidden;
+    position: relative; }
+    #top-slider .background .scale {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      z-index: 0;
+      top: 0; }
+      #top-slider .background .scale .background-scale {
+        width: 300px;
+        height: 150px;
+        border-radius: 0 0 300px 300px;
+        background-color: #ac702a;
+        position: absolute;
+        bottom: 0;
+        z-index: 2; }
+  #top-slider .button-scale {
+    width: 280px;
+    height: 0;
+    background-color: rgba(100, 100, 100, 0.3);
+    position: absolute;
+    bottom: 0;
+    z-index: 4; }
+    #top-slider .button-scale img {
+      height: 70px;
+      width: 70px;
+      -webkit-transform: rotate(-105deg);
+      transform: rotate(-105deg);
+      position: absolute;
+      bottom: -33px;
+      left: -30px;
+      cursor: all-scroll; }
+    #top-slider .button-scale #top-slider-button {
+      height: 1px;
+      width: 100%; }
+  #top-slider .white-block {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+    #top-slider .white-block-background {
+      width: 260px;
+      height: 150px;
+      border-radius: 260px 260px 0 0;
+      background-color: #fff;
+      overflow: hidden;
+      position: absolute;
+      top: 30px;
+      left: 0; }
