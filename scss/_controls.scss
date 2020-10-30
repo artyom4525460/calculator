@@ -1,5 +1,6 @@
 button {
     background: $brown;
+    cursor: pointer;
 }
 
 .button {
@@ -19,5 +20,23 @@ button {
     &:hover {
         color: $brown;
         background-color: #fff;
+    }
+}
+
+.small-button{
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    img{
+        width: 7px;
+    }
+    &:hover{
+        background-color: $brown;
+        opacity: 0.8;
     }
 }

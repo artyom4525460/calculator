@@ -17,7 +17,7 @@
                         <label>
                             <p>What loan amount would you like?</p>
                         </label>
-                        <input type="hidden">
+                        <input type="hidden" name="sum" value="800">
                         <div id="top-slider">
                             <div class="background" id="top-slider-background">
                                 <div class="scale" id="scale">
@@ -32,35 +32,76 @@
                             <div class="white-block">
                                 <div class="white-block-background"></div>
                             </div>
-                            <div class="amount"></div>
+                            <div class="amount-block">
+                                <div class="dollar"><img src="./images/dollar.png" alt=""></div>
+                                <div id="amount" class="amount">800</div>
+                            </div>
                             <div class="buttons">
-                                
+                                <button class="button small-button reduce-button" id="reduceSum">
+                                    <img src="./images/minus-solid.svg" alt="">
+                                </button>
+                                <button class="button small-button add-button"  id="addSum">
+                                    <img src="./images/plus-solid.svg" alt="">
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="form-field">
+                    <div class="form-field info-field">
                         <label>
                             <p>Want to know how many repayments?</p>
                         </label>
-                        <input type="hidden">
+                        <div class="terms-slider" id="terms-slider">
+                            <div class="items">
+                                <div class="item active" data-value="1" id="item1">
+                                </div>
+                                <div class="item" data-value="2" id="item2">
+                                </div>
+                                <div class="item" data-value="3" id="item3">
+                                </div>
+
+                                <div class="progress-line" id="progress-line">
+                                    <div class="flag" id="flag">1</div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="item-info" id="item2-info">
+                                    <div class="item-info-image"><img src="./images/exclamation-solid.svg" alt=""></div>
+                                    Two payments loans are only available for customers who get paid weekly, bi-weekly or twice a month.
+                                </div>
+                                <div class="item-info" id="item3-info">
+                                    <div class="item-info-image"><img src="./images/exclamation-solid.svg" alt=""></div>
+                                    Three payments loans are only available for customers who get paid weekly, bi-weekly or twice a month.
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="term" value="1">
                     </div>
                     <div class="form-field">
                         <label>
                             <p>Tell us what province you live in.</p>
                         </label>
-                        <input type="hidden">
                         <div class="selector" id="selector">
-
+                            <div class="text" id="selector-result">Alberta</div>
+                            <div class="menu transition visible" id="dropdown">
+                                <div class="selector-item active selected" data-value="alberta">Alberta</div>
+                                <div class="selector-item" data-value="british-columbia" selected="">British Columbia</div>
+                                <div class="selector-item" data-value="ontario">Ontario</div>
+                                <div class="selector-item" data-value="new-brunswick">New Brunswick</div>
+                                <div class="selector-item" data-value="saskatchewan">Saskatchewan</div>
+                                <div class="selector-item" data-value="manitoba">Manitoba</div>
+                                <div class="selector-item" data-value="quebec">Quebec</div>
+                                <div class="selector-item" data-value="newfoundland-and-labrador">Newfoundland and Labrador</div>
+                            </div>
                         </div>
+                        <input type="hidden" name="province" value="Alberta">
                     </div>
-                    <button class="button">
+                    <button class="button" id="apply-button">
                         APPLY NOW FOR FAST APPROVAL
                     </button>
                 </form>
             </div>
         </div>
     </section>
-    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script defer src="./js/script.js"></script>
 </body>
 
