@@ -253,8 +253,7 @@ Array.from(selector.menuItems).forEach(function(element) {
         element.classList.add('selected')
         selector.selectorResult.innerHTML = element.innerHTML
         selector.province.value = element.innerHTML
-        selector.dropdown.style.opacity = 0
-        selector.dropdown.style.display = 'none'
+        selector.dropdown.style.height = '0px'
     })
 })
 
@@ -272,4 +271,12 @@ document.getElementById('apply-button').addEventListener('click', function(event
         term: ${termSlider.sumValue.value},
         province: ${selector.province.value},
     `)
+})
+
+document.body.addEventListener('click', function(event){
+    console.log(event.target)
+    if(event.target != selector.menu && event.target != selector.dropdown){
+        selector.dropdown.style.height = '0px'
+        selector.elem.classList.remove('active')
+    }
 })
