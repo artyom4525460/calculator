@@ -211,19 +211,36 @@ termSlider.item3.addEventListener('click', function(event){
     selectorResult: document.getElementById('selector-result'),
     
     showItems: function(){
-        this.dropdown.style.opacity = 1
-        selector.dropdown.style.display = 'block'
+        //this.dropdown.style.opacity = 1
+        //selector.dropdown.style.display = 'block'
         // this.dropdown.animate([
         //     //{ opacity: 0, height: '40px' }, 
-        //     { opacity: 1, height: '300px' }
+        //     { opacity: 1, height: '300' }
         //   ], {
         //     duration: 1000
         //   })
+        this.dropdown.style.height = '300px'
+    },     
+    hideItems: function(){
+        // this.dropdown.animate([
+        //     //{ opacity: 0, height: '40px' }, 
+        //     { opacity: 0, height: '0px' }
+        //   ], {
+        //     duration: 1000
+        //   })
+        this.dropdown.style.height = '0px'
     } 
  }
 
  selector.elem.addEventListener('click', function(event){
-    selector.showItems()
+    if(!selector.elem.classList.contains('active')){
+        selector.showItems()
+        selector.elem.classList.add('active')
+    }
+    else{
+        selector.hideItems()
+        selector.elem.classList.remove('active')
+    }
 }, true)
 
 
