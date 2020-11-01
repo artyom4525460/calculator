@@ -106,7 +106,6 @@ topSlider.scaleBlock.addEventListener('click', function(event){
             x : event.clientX,
             y : event.clientY
         };
-        console.log(mousePosition)
         moveSliders(mousePosition, true)
     }
 }, true)
@@ -124,12 +123,19 @@ topSlider.reduceButton.addEventListener('click', function(event){
 topSliderButton.elem.addEventListener('mousedown', function(event){
     event.preventDefault();
     topSliderButton.isDown = true
-    let coords = topSlider.getCenterCoords()
+})
+
+topSliderButton.elem.addEventListener('touchstart', function(event){
+    topSliderButton.isDown = true
 })
 
 document.addEventListener('mouseup', function() {
     topSliderButton.isDown = false
 }, true)
+
+topSliderButton.elem.addEventListener('touchend', function(event){
+    topSliderButton.isDown = true
+})
 
 document.addEventListener('mousemove', function(event) {
     event.preventDefault();
@@ -141,6 +147,17 @@ document.addEventListener('mousemove', function(event) {
         moveSliders(mousePosition)
     }
 }, true)
+
+document.addEventListener('touchmove', function(event) {
+    if (topSliderButton.isDown) {
+        mousePosition = {
+            x : event.touches[0].clientX,
+            y : event.touches[0].clientY
+        };
+        moveSliders(mousePosition)
+    }
+}, { passive: false })
+
 
 var init = function(){
     topSlider.move(topSlider.currentDeg)
@@ -260,8 +277,7 @@ document.getElementById('apply-button').addEventListener('click', function(event
 })
 
 document.body.addEventListener('click', function(event){
-    console.log(event.target)
-    if(event.target != selector.menu && event.target != selector.dropdown){
+    if(event.target != selector.menu && event.target != selector.dropdown && event.target != selector.selectorResult){
         selector.dropdown.style.height = '0px'
         selector.elem.classList.remove('active')
     }
