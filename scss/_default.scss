@@ -61,3 +61,8 @@ p {
     text-align: center;
     position: relative;
 }
+
+.transition{
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}

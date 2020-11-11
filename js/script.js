@@ -123,18 +123,26 @@ topSlider.reduceButton.addEventListener('click', function(event){
 topSliderButton.elem.addEventListener('mousedown', function(event){
     event.preventDefault();
     topSliderButton.isDown = true
+    topSlider.sliderScale.classList.remove('transition')
+    topSliderButton.buttonScale.classList.remove('transition')
 })
 
 topSliderButton.elem.addEventListener('touchstart', function(event){
     topSliderButton.isDown = true
+    topSlider.sliderScale.classList.remove('transition')
+    topSliderButton.buttonScale.classList.remove('transition')
 })
 
 document.addEventListener('mouseup', function() {
     topSliderButton.isDown = false
+    topSlider.sliderScale.classList.add('transition')
+    topSliderButton.buttonScale.classList.add('transition')
 }, true)
 
 topSliderButton.elem.addEventListener('touchend', function(event){
     topSliderButton.isDown = true
+    topSlider.sliderScale.classList.add('transition')
+    topSliderButton.buttonScale.classList.add('transition')
 })
 
 document.addEventListener('mousemove', function(event) {

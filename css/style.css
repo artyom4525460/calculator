@@ -46,6 +46,10 @@ p {
   text-align: center;
   position: relative; }
 
+.transition {
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+
 button {
   background: #ac702a;
   cursor: pointer; }
@@ -100,9 +104,7 @@ button {
       height: 300px;
       position: absolute;
       z-index: 0;
-      top: 0;
-      -webkit-transition: all .5s;
-      transition: all .5s; }
+      top: 0; }
       #top-slider .background .scale .background-scale {
         width: 300px;
         height: 150px;
@@ -117,9 +119,7 @@ button {
     background-color: rgba(100, 100, 100, 0.3);
     position: absolute;
     bottom: 0;
-    z-index: 6;
-    -webkit-transition: all .5s;
-    transition: all .5s; }
+    z-index: 6; }
     #top-slider .button-scale img {
       height: 70px;
       width: 70px;
