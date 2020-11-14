@@ -5,6 +5,10 @@
     width: 300px;
     height: 150px;
     position: relative;
+    @media screen and (max-width: 370px) {
+        width: 260px;
+        height: 130px;
+    }
     .background{
         width: 300px;
         height: 150px;
@@ -12,12 +16,20 @@
         background-color: $grey;
         overflow: hidden;
         position: relative;
+        @media screen and (max-width: 370px) {
+            width: 260px;
+            height: 130px;
+        }
         .scale{
             width: 300px;
             height: 300px;
             position: absolute;
             z-index: 0;
             top: 0;
+            @media screen and (max-width: 370px) {
+                width: 260px;
+                height: 260px;
+            }
             .background-scale{
                 width: 300px;
                 height: 150px;
@@ -26,6 +38,10 @@
                 position: absolute;
                 bottom: 0;
                 z-index: 2;
+                @media screen and (max-width: 370px) {
+                    width: 260px;
+                    height: 130px;
+                }
             }
         }
     }
@@ -36,6 +52,9 @@
         position: absolute;
         bottom: 0;
         z-index: 6;
+        @media screen and (max-width: 370px) {
+            width: 240px;
+        }
         img{
             height: 70px;
             width: 70px;
@@ -45,6 +64,10 @@
             bottom: -33px;
             left: -30px;
             cursor: all-scroll;
+            @media screen and (max-width: 370px) {
+                //bottom: -29px;
+                //left: -26px;
+            }
         }
         #top-slider-button{
             height: 1px;
@@ -58,6 +81,10 @@
         top: 0;
         left: 0;
         overflow: hidden;
+        @media screen and (max-width: 370px) {
+            width: 260px;
+            height: 130px;
+        }
         &-background{
             width: 260px;
             height: 150px;
@@ -67,6 +94,10 @@
             position: absolute;
             top: 30px;
             left: 0;
+            @media screen and (max-width: 370px) {
+                width: 230px;
+                height: 130px;
+            }
         }
     }
     .amount-block{
@@ -103,6 +134,9 @@
     position: relative;
     width: 300px;
     margin: 0 auto;
+    @media screen and (max-width: 370px) {
+        width: 260px;
+    }
     .items{
         width: 100%;
         display: flex;

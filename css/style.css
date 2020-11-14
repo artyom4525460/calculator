@@ -45,6 +45,16 @@ p {
   left: 0;
   text-align: center;
   position: relative; }
+  @media screen and (max-width: 450px) {
+    #phone {
+      width: calc(100vw + 40px);
+      margin-left: -20px;
+      margin-right: -20px; } }
+  @media screen and (max-width: 450px) {
+    #phone {
+      width: calc(100vw + 70px);
+      margin-left: -35px;
+      margin-right: -35px; } }
 
 .transition {
   -webkit-transition: all .5s;
@@ -92,6 +102,10 @@ button {
   width: 300px;
   height: 150px;
   position: relative; }
+  @media screen and (max-width: 370px) {
+    #top-slider {
+      width: 260px;
+      height: 130px; } }
   #top-slider .background {
     width: 300px;
     height: 150px;
@@ -99,12 +113,20 @@ button {
     background-color: #838383;
     overflow: hidden;
     position: relative; }
+    @media screen and (max-width: 370px) {
+      #top-slider .background {
+        width: 260px;
+        height: 130px; } }
     #top-slider .background .scale {
       width: 300px;
       height: 300px;
       position: absolute;
       z-index: 0;
       top: 0; }
+      @media screen and (max-width: 370px) {
+        #top-slider .background .scale {
+          width: 260px;
+          height: 260px; } }
       #top-slider .background .scale .background-scale {
         width: 300px;
         height: 150px;
@@ -113,6 +135,10 @@ button {
         position: absolute;
         bottom: 0;
         z-index: 2; }
+        @media screen and (max-width: 370px) {
+          #top-slider .background .scale .background-scale {
+            width: 260px;
+            height: 130px; } }
   #top-slider .button-scale {
     width: 280px;
     height: 0;
@@ -120,6 +146,9 @@ button {
     position: absolute;
     bottom: 0;
     z-index: 6; }
+    @media screen and (max-width: 370px) {
+      #top-slider .button-scale {
+        width: 240px; } }
     #top-slider .button-scale img {
       height: 70px;
       width: 70px;
@@ -139,6 +168,10 @@ button {
     top: 0;
     left: 0;
     overflow: hidden; }
+    @media screen and (max-width: 370px) {
+      #top-slider .white-block {
+        width: 260px;
+        height: 130px; } }
     #top-slider .white-block-background {
       width: 260px;
       height: 150px;
@@ -148,6 +181,10 @@ button {
       position: absolute;
       top: 30px;
       left: 0; }
+      @media screen and (max-width: 370px) {
+        #top-slider .white-block-background {
+          width: 230px;
+          height: 130px; } }
   #top-slider .amount-block {
     position: absolute;
     top: 75px;
@@ -175,6 +212,9 @@ button {
   position: relative;
   width: 300px;
   margin: 0 auto; }
+  @media screen and (max-width: 370px) {
+    .terms-slider {
+      width: 260px; } }
   .terms-slider .items {
     width: 100%;
     display: flex;

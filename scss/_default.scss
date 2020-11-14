@@ -60,6 +60,16 @@ p {
     left: 0;
     text-align: center;
     position: relative;
+    @media screen and (max-width: 450px) {
+        width: calc(100vw + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    @media screen and (max-width: 450px) {
+        width: calc(100vw + 70px);
+        margin-left: -35px;
+        margin-right: -35px;
+    }
 }
 
 .transition{
